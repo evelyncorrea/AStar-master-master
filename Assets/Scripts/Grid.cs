@@ -4,10 +4,12 @@ using UnityEngine;
 public class Grid : MonoBehaviour
 {
 	[System.Serializable]
-	public struct Position
+	public class Position
 	{
 		public int x;
 		public int y;
+
+        public Position previous;
 
 		public Vector3 ToWorldPosition( Vector2 spacing, float height )
 		{
